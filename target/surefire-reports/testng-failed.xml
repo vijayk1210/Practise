@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Suite1]">
+  <parameter name="browser" value="chrome"/>
+  <test name="Manager - Add Account(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="TestCases.AddCustomerAndAccount">
+        <methods>
+          <include name="VerifyAddingNewCustomer_SM4"/>
+        </methods>
+      </class> <!-- TestCases.AddCustomerAndAccount -->
+      <class name="Utility.Base">
+        <methods>
+          <include name="extentSetup"/>
+          <include name="generateReport"/>
+        </methods>
+      </class> <!-- Utility.Base -->
+    </classes>
+  </test> <!-- Manager - Add Account(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

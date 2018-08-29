@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite1" duration-ms="599" started-at="2018-05-11T16:48:21Z" finished-at="2018-05-11T16:48:22Z">
+    <groups>
+    </groups>
+    <test name="loginTests" duration-ms="599" started-at="2018-05-11T16:48:21Z" finished-at="2018-05-11T16:48:22Z">
+      <class name="TestCases.LoginTest">
+        <test-method status="PASS" signature="verifyLogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestCases.LoginTest@295bf2a]" name="verifyLogin" duration-ms="16" started-at="2018-05-11T22:18:22Z" data-provider="Authentication" finished-at="2018-05-11T22:18:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Valid]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Enter valid userid and password]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[mngr124806]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[testing@1234]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method status="PASS" signature="verifyLogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestCases.LoginTest@295bf2a]" name="verifyLogin" duration-ms="3" started-at="2018-05-11T22:18:22Z" data-provider="Authentication" finished-at="2018-05-11T22:18:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Invalid]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Enter invalid userid]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[vijayk]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[asugAjU]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method status="PASS" signature="verifyLogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestCases.LoginTest@295bf2a]" name="verifyLogin" duration-ms="1" started-at="2018-05-11T22:18:22Z" data-provider="Authentication" finished-at="2018-05-11T22:18:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Invalid]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Enter invalid password]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[mngr124806]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[vijayk]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method status="PASS" signature="verifyLogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestCases.LoginTest@295bf2a]" name="verifyLogin" duration-ms="1" started-at="2018-05-11T22:18:22Z" data-provider="Authentication" finished-at="2018-05-11T22:18:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Invalid]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Enter invalid userid and password]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[vijayk]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[testP]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+      </class> <!-- TestCases.LoginTest -->
+      <class name="Utility.Base">
+        <test-method status="PASS" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:Utility.Base@43a0a32d]" name="extentSetup" is-config="true" duration-ms="263" started-at="2018-05-11T22:18:21Z" finished-at="2018-05-11T22:18:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@203d1d93]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentSetup -->
+        <test-method status="PASS" signature="generateReport()[pri:0, instance:Utility.Base@43a0a32d]" name="generateReport" is-config="true" duration-ms="0" started-at="2018-05-11T22:18:22Z" finished-at="2018-05-11T22:18:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateReport -->
+      </class> <!-- Utility.Base -->
+    </test> <!-- loginTests -->
+  </suite> <!-- Suite1 -->
+</testng-results>
