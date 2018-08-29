@@ -1,21 +1,36 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" > 
 <suite name="Suite1" verbose="1" >
 
-  
-<test name="loginTests" > 
+<listeners>
+        <listener class-name="Listener.ListenReRun"/>
+  </listeners>
+ 
+<test name="ReRun" > 
 
-    <parameter name="browser" value="chrome"></parameter>  
+   
   
     <classes>
        <class name="Utility.Base" />
-       <class name="TestCases.LoginTest" />
+       <class name="TestCases.TestReRun" />
+    </classes> 
+    
+  </test>
+  
+
+  
+<test name="AnotherReRun" > 
+
+   
+  
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.TestingAgainRun" />
     </classes> 
     
   </test>
 <!-- 
   <test name="Manager - Add Account" > 
-
-    <parameter name="browser" value="chrome"></parameter>  
+ 
   
     <classes>
        <class name="Utility.Base" />

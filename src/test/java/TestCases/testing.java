@@ -42,6 +42,10 @@ public class testing {
 		
 		//System.out.println("Average age is: "+avgAge);
 		
+		StringBuffer sb=new StringBuffer("Hello ");  
+		sb.reverse();
+		
+		System.out.println("Reversed string is: "+sb);
 		
 		
 		}finally {

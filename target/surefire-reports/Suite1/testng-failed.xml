@@ -1,21 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite verbose="0" name="Failed suite [Suite1]">
-  <parameter name="browser" value="chrome"/>
-  <test name="Manager - Add Account(failed)">
-    <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="Listener.ListenReRun"/>
+  </listeners>
+  <test name="ReRun(failed)">
     <classes>
-      <class name="TestCases.AddCustomerAndAccount">
+      <class name="TestCases.TestingAgainRun">
         <methods>
-          <include name="VerifyAddingNewCustomer_SM4"/>
-        </methods>
-      </class> <!-- TestCases.AddCustomerAndAccount -->
-      <class name="Utility.Base">
-        <methods>
+          <include name="afterEachTestMethod"/>
           <include name="extentSetup"/>
+          <include name="initializeTestBaseSetup"/>
           <include name="generateReport"/>
         </methods>
-      </class> <!-- Utility.Base -->
+      </class> <!-- TestCases.TestingAgainRun -->
+      <class name="TestCases.TestReRun">
+        <methods>
+          <include name="afterEachTestMethod"/>
+          <include name="initializeTestBaseSetup"/>
+          <include name="ReRunOne"/>
+        </methods>
+      </class> <!-- TestCases.TestReRun -->
     </classes>
-  </test> <!-- Manager - Add Account(failed) -->
+  </test> <!-- ReRun(failed) -->
+  <test name="AnotherReRun(failed)">
+    <classes>
+      <class name="TestCases.TestingAgainRun">
+        <methods>
+          <include name="afterEachTestMethod"/>
+          <include name="ReRunningTwo"/>
+          <include name="extentSetup"/>
+          <include name="initializeTestBaseSetup"/>
+          <include name="generateReport"/>
+        </methods>
+      </class> <!-- TestCases.TestingAgainRun -->
+      <class name="TestCases.TestReRun">
+        <methods>
+          <include name="afterEachTestMethod"/>
+          <include name="initializeTestBaseSetup"/>
+        </methods>
+      </class> <!-- TestCases.TestReRun -->
+    </classes>
+  </test> <!-- AnotherReRun(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

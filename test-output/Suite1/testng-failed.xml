@@ -1,19 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite1]">
-  <parameter name="browser" value="chrome"/>
-  <test name="Change Password(failed)">
-    <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="Listener.ListenReRun"/>
+  </listeners>
+  <test name="ReRun(failed)">
     <classes>
-      <class name="TestCases.ChangePasswordTest">
+      <class name="TestCases.TestReRun">
         <methods>
           <include name="afterEachTestMethod"/>
-          <include name="verifyChangePasswordWithIncorrectOldPassword"/>
-          <include name="extentSetup"/>
           <include name="initializeTestBaseSetup"/>
+          <include name="ReRunOne"/>
+        </methods>
+      </class> <!-- TestCases.TestReRun -->
+      <class name="Utility.Base">
+        <methods>
+          <include name="extentSetup"/>
           <include name="generateReport"/>
         </methods>
-      </class> <!-- TestCases.ChangePasswordTest -->
+      </class> <!-- Utility.Base -->
     </classes>
-  </test> <!-- Change Password(failed) -->
+  </test> <!-- ReRun(failed) -->
+  <test name="AnotherReRun(failed)">
+    <classes>
+      <class name="TestCases.TestReRun">
+        <methods>
+          <include name="afterEachTestMethod"/>
+          <include name="initializeTestBaseSetup"/>
+        </methods>
+      </class> <!-- TestCases.TestReRun -->
+      <class name="TestCases.TestingAgainRun">
+        <methods>
+          <include name="ReRunningTwo"/>
+        </methods>
+      </class> <!-- TestCases.TestingAgainRun -->
+      <class name="Utility.Base">
+        <methods>
+          <include name="extentSetup"/>
+          <include name="generateReport"/>
+        </methods>
+      </class> <!-- Utility.Base -->
+    </classes>
+  </test> <!-- AnotherReRun(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

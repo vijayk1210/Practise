@@ -188,7 +188,7 @@ public class Base {
     @AfterSuite
     public void generateReport() {
     	
-       //extent.close();
+       extent.close();
     }
 
     private Date getTime(long millis) {
