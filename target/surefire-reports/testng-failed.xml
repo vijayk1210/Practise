@@ -4,42 +4,21 @@
   <listeners>
     <listener class-name="Listener.ListenReRun"/>
   </listeners>
-  <test name="ReRun(failed)">
+  <test name="AutoBugCreation(failed)">
     <classes>
-      <class name="TestCases.TestingAgainRun">
+      <class name="Utility.Base">
         <methods>
-          <include name="afterEachTestMethod"/>
           <include name="extentSetup"/>
-          <include name="initializeTestBaseSetup"/>
           <include name="generateReport"/>
         </methods>
-      </class> <!-- TestCases.TestingAgainRun -->
+      </class> <!-- Utility.Base -->
       <class name="TestCases.TestReRun">
         <methods>
           <include name="afterEachTestMethod"/>
-          <include name="initializeTestBaseSetup"/>
-          <include name="ReRunOne"/>
-        </methods>
-      </class> <!-- TestCases.TestReRun -->
-    </classes>
-  </test> <!-- ReRun(failed) -->
-  <test name="AnotherReRun(failed)">
-    <classes>
-      <class name="TestCases.TestingAgainRun">
-        <methods>
-          <include name="afterEachTestMethod"/>
-          <include name="ReRunningTwo"/>
-          <include name="extentSetup"/>
-          <include name="initializeTestBaseSetup"/>
-          <include name="generateReport"/>
-        </methods>
-      </class> <!-- TestCases.TestingAgainRun -->
-      <class name="TestCases.TestReRun">
-        <methods>
-          <include name="afterEachTestMethod"/>
+          <include name="testbugFromJenkins"/>
           <include name="initializeTestBaseSetup"/>
         </methods>
       </class> <!-- TestCases.TestReRun -->
     </classes>
-  </test> <!-- AnotherReRun(failed) -->
+  </test> <!-- AutoBugCreation(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

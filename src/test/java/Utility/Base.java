@@ -62,12 +62,15 @@ public class Base {
 
     private static void launchChromeDriver(String appURL) {
     	ExtentTestManager.getTest().log(LogStatus.INFO, "Launching Chrome browser"); 
-    	System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+    	System.out.println("launching chrome.");
+    	/*System.setProperty("webdriver.chrome.driver","chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		System.out.println("launched chrome.");
+		//driver.manage().window().maximize();
+		System.out.println("browser maximized.");
+		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get(appURL);
-		System.out.println("Url loaded");
+		System.out.println("Url loaded");*/
 		
 	}
 
@@ -101,8 +104,58 @@ public class Base {
     @AfterMethod
     public void afterEachTestMethod(ITestResult result) {
     	System.out.println("Inside after method..");
-    	
-    	try {
+    	 ExtentTestManager.getTest().getTest().setStartedTime(getTime(result.getStartMillis()));  // new
+         ExtentTestManager.getTest().getTest().setEndedTime(getTime(result.getEndMillis()));  // new
+
+         for (String group : result.getMethod().getGroups()) {
+             ExtentTestManager.getTest().assignCategory(group);  // new
+         }
+
+         if (result.getStatus() == 1) {
+            ExtentTestManager.getTest().log(LogStatus.PASS, "Test Passed");  // new
+            
+            System.out.println("Inside status 1 block..");
+             
+             try {
+ 				Thread.sleep(3000);
+ 			} catch (InterruptedException e) {
+ 				// TODO Auto-generated catch block
+ 				e.printStackTrace();
+ 			}
+             
+             String path1 = util.CaptureScreenShotWithTestStepNameUsingRobotClass(result.getName());
+             
+             String image1 = ExtentTestManager.getTest().addScreenCapture(path1);
+           
+             ExtentTestManager.getTest().log(LogStatus.PASS,image1);
+                    	  
+         
+            	
+         } else if (result.getStatus() == 2) {
+             String path = util.getscreenshot(driver, result.getName());
+            
+             if(browser.equalsIgnoreCase("firefox")){
+             String editPath = "file://";
+             String FinalPath = editPath.concat(path);
+             
+             System.out.println("Path in gecko refreshed");
+            
+             String image = ExtentTestManager.getTest().addScreenCapture(FinalPath);
+         	  ExtentTestManager.getTest().log(LogStatus.FAIL,getStackTrace(result.getThrowable()));
+         	try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+         	ExtentTestManager.getTest().log(LogStatus.FAIL,image);
+             }else{
+            	 
+             }
+             
+         }
+         ExtentTestManager.endTest();
+/*    	try {
     	  ExtentTestManager.getTest().getTest().setStartedTime(getTime(result.getStartMillis()));  // new
           ExtentTestManager.getTest().getTest().setEndedTime(getTime(result.getEndMillis()));  // new
 
@@ -182,7 +235,7 @@ public class Base {
     	}finally {
     		extent.flush();
             driver.quit();
-    	}
+    	}*/
     }
 
     @AfterSuite

@@ -23,6 +23,26 @@ public class testing {
 		System.out.println("This is a static method in super"+text);
 	}
 	
+	 public void splitString(String stri) 
+	    { 
+	        StringBuffer alpha = new StringBuffer(),  
+	        num = new StringBuffer(), special = new StringBuffer(); 
+	          
+	        for (int i=0; i<stri.length(); i++) 
+	        { 
+	            if (Character.isDigit(stri.charAt(i))) 
+	                num.append(stri.charAt(i)); 
+	            else if(Character.isAlphabetic(stri.charAt(i))) 
+	                alpha.append(stri.charAt(i)); 
+	            else
+	                special.append(stri.charAt(i)); 
+	        } 
+	        
+	        System.out.println(alpha); 
+	        System.out.println(num); 
+	        System.out.println(special); 
+	    } 
+	
 	
 	public static void main(String[] args) {
 		try {
@@ -47,7 +67,9 @@ public class testing {
 		
 		System.out.println("Reversed string is: "+sb);
 		
+		testing sepCharDigitSpecialChar = new testing();
 		
+		sepCharDigitSpecialChar.splitString("v@ijay#1210");
 		}finally {
 			
 		}

@@ -5,7 +5,7 @@
         <listener class-name="Listener.ListenReRun"/>
   </listeners>
  
-<test name="ReRun" > 
+<test name="AutoBugCreation" > 
 
    
   
@@ -18,16 +18,7 @@
   
 
   
-<test name="AnotherReRun" > 
 
-   
-  
-    <classes>
-       <class name="Utility.Base" />
-       <class name="TestCases.TestingAgainRun" />
-    </classes> 
-    
-  </test>
 <!-- 
   <test name="Manager - Add Account" > 
  
