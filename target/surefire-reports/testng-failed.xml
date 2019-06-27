@@ -1,24 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite verbose="0" name="Failed suite [Suite1]">
-  <listeners>
-    <listener class-name="Listener.ListenReRun"/>
-  </listeners>
-  <test name="AutoBugCreation(failed)">
+<suite thread-count="2" verbose="0" name="Failed suite [Suite1]" parallel="tests">
+  <parameter name="node" value="http://localhost:6080/wd/hub"/>
+  <parameter name="browser" value="firefox"/>
+  <test name="Selenium Grid(failed)" parallel="tests">
+    <parameter name="node" value="http://localhost:6081/wd/hub"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="Utility.Base">
-        <methods>
-          <include name="extentSetup"/>
-          <include name="generateReport"/>
-        </methods>
-      </class> <!-- Utility.Base -->
       <class name="TestCases.TestReRun">
         <methods>
           <include name="afterEachTestMethod"/>
+          <include name="afterEachTestMethod"/>
           <include name="testbugFromJenkins"/>
+          <include name="extentSetup"/>
           <include name="initializeTestBaseSetup"/>
+          <include name="initializeTestBaseSetup"/>
+          <include name="generateReport"/>
         </methods>
       </class> <!-- TestCases.TestReRun -->
     </classes>
-  </test> <!-- AutoBugCreation(failed) -->
+  </test> <!-- Selenium Grid(failed) -->
+  <test name="Selenium Grid2(failed)" parallel="tests">
+    <parameter name="node" value="http://localhost:6080/wd/hub"/>
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="TestCases.TestReRun">
+        <methods>
+          <include name="afterEachTestMethod"/>
+          <include name="afterEachTestMethod"/>
+          <include name="testbugFromJenkins"/>
+          <include name="extentSetup"/>
+          <include name="initializeTestBaseSetup"/>
+          <include name="initializeTestBaseSetup"/>
+          <include name="generateReport"/>
+        </methods>
+      </class> <!-- TestCases.TestReRun -->
+    </classes>
+  </test> <!-- Selenium Grid2(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

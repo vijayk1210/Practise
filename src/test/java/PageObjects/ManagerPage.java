@@ -50,71 +50,71 @@ public class ManagerPage extends Base{
 	
 	public static void clickChangePasswordLink() {
 		
-		driver.findElement(By.xpath(changePasswordXpath)).click();
+		getDriver().findElement(By.xpath(changePasswordXpath)).click();
 		
 	}
 	public static void enterOldPassword(String oldPassword){
 		
-		driver.findElement(By.xpath(oldPasswordXpath)).sendKeys(oldPassword);
+		getDriver().findElement(By.xpath(oldPasswordXpath)).sendKeys(oldPassword);
 		
 	}
 	
 	
 	public static void enterNewPassword(String newPassword) {
 		
-		driver.findElement(By.xpath(newPasswordXpath)).sendKeys(newPassword);
+		getDriver().findElement(By.xpath(newPasswordXpath)).sendKeys(newPassword);
 	}
 	
 	public static void enterConfirmPassword(String confirmPassword) {
 		
-		driver.findElement(By.xpath(confirmPasswordXpath)).sendKeys(confirmPassword);
+		getDriver().findElement(By.xpath(confirmPasswordXpath)).sendKeys(confirmPassword);
 	}
 	
 	public static void clickSubmitForChangePassword() {
 		
-		driver.findElement(By.xpath(submitChangePasswordXpath)).click();
+		getDriver().findElement(By.xpath(submitChangePasswordXpath)).click();
 	}
 
 	
 	
 	public static void clickAddNewCustomer() {
 		
-		driver.findElement(By.xpath(addNewCustomerXpath)).click();
+		getDriver().findElement(By.xpath(addNewCustomerXpath)).click();
 	}
 	
 	
 	public static void enterNewCustomerDetails() {
 		try {
 			
-			driver.findElement(By.xpath(customerNameXpath)).sendKeys(RandomStringUtils.random(7,new char[]{'a','b','c','d','e','f','g','h','i','j','k','l','m'}));
+			getDriver().findElement(By.xpath(customerNameXpath)).sendKeys(RandomStringUtils.random(7,new char[]{'a','b','c','d','e','f','g','h','i','j','k','l','m'}));
 			
 			String genderNewXpath = customerGenderXpath.replace("genderXpathVal", util.getCellData(filePath, sheetName, 1, 1));
 			
-			driver.findElement(By.xpath(genderNewXpath)).click();
+			getDriver().findElement(By.xpath(genderNewXpath)).click();
 			
 			System.out.println("Gender xpath: "+genderNewXpath);
 			
 			ExtentTestManager.getTest().log(LogStatus.INFO, "Selected  gender option."); 
 			
-			driver.findElement(By.xpath(customerDOBXpath)).sendKeys(util.getCellData(filePath, sheetName, 1, 2));
+			getDriver().findElement(By.xpath(customerDOBXpath)).sendKeys(util.getCellData(filePath, sheetName, 1, 2));
 			
 			
 			
-			driver.findElement(By.xpath(customerAddressXpath)).sendKeys(util.getRandomAlpaNumericString());
+			getDriver().findElement(By.xpath(customerAddressXpath)).sendKeys(util.getRandomAlpaNumericString());
 			
-			driver.findElement(By.xpath(customerCityXpath)).sendKeys(util.getCellData(filePath, sheetName, 1, 4));
+			getDriver().findElement(By.xpath(customerCityXpath)).sendKeys(util.getCellData(filePath, sheetName, 1, 4));
 			
-			driver.findElement(By.xpath(customerStateXpath)).sendKeys(util.getCellData(filePath, sheetName, 1, 5));
+			getDriver().findElement(By.xpath(customerStateXpath)).sendKeys(util.getCellData(filePath, sheetName, 1, 5));
 			
-			driver.findElement(By.xpath(customerPinNoXpath)).sendKeys(util.getCellData(filePath, sheetName, 1, 6));
+			getDriver().findElement(By.xpath(customerPinNoXpath)).sendKeys(util.getCellData(filePath, sheetName, 1, 6));
 			
-			driver.findElement(By.xpath(customerMobileXpath)).sendKeys(util.getCellData(filePath, sheetName, 1, 7));
+			getDriver().findElement(By.xpath(customerMobileXpath)).sendKeys(util.getCellData(filePath, sheetName, 1, 7));
 			
-			driver.findElement(By.xpath(customerEmailXpath)).sendKeys(util.getCellData(filePath, sheetName, 1, 8));
+			getDriver().findElement(By.xpath(customerEmailXpath)).sendKeys(util.getCellData(filePath, sheetName, 1, 8));
 			
-			driver.findElement(By.xpath(customerPasswordXpath)).sendKeys(util.getCellData(filePath, sheetName, 1, 9));
+			getDriver().findElement(By.xpath(customerPasswordXpath)).sendKeys(util.getCellData(filePath, sheetName, 1, 9));
 			
-			driver.findElement(By.xpath(customerSubmitXpath)).click();
+			getDriver().findElement(By.xpath(customerSubmitXpath)).click();
 			
 			
 		}catch(FileNotFoundException e) {

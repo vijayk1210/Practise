@@ -1,35 +1,325 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" > 
-<suite name="Suite1" verbose="1" >
 
-<listeners>
-        <listener class-name="Listener.ListenReRun"/>
-  </listeners>
+
+<suite name="Suite1" parallel="tests" thread-count="2" >
+
  
-<test name="AutoBugCreation" > 
-
-   
-  
+  <test name="Selenium Grid" > 
+   <parameter name="browser" value="chrome"></parameter>
+   <parameter name="node" value="http://localhost:6080/wd/hub"></parameter>
     <classes>
        <class name="Utility.Base" />
        <class name="TestCases.TestReRun" />
     </classes> 
-    
   </test>
   
-
-  
-
-<!-- 
-  <test name="Manager - Add Account" > 
- 
-  
+   <test name="Selenium Grid2" > 
+  <parameter name="browser" value="firefox"></parameter>
+  <parameter name="node" value="http://localhost:6081/wd/hub"></parameter>
     <classes>
        <class name="Utility.Base" />
-       <class name="TestCases.AddCustomerAndAccount" />
+       <class name="TestCases.TestReRun" />
     </classes> 
-    
   </test>
   
- -->
-       
+  
+  
+<!--      
+  <test name="My Account: Login" > 
+     <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.MyAccount12398_02_a" />
+      </classes>
+  </test>
+     
+  
+   <test name="My WishList" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.MyAccount12398_02_c" />
+    </classes>
+   </test> 
+  
+  <test name="My Account: Add to wishlist" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.MyAccount12398_02_d" />
+    </classes>
+  </test> 
+  
+ 
+   <test name="MyWish list page" >
+     <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.MyAccount12398_02_e" />
+     </classes>
+  </test> 
+    
+  <test name="My Profile" >  
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.MyAccount12398_02_f" />
+    </classes>
+  </test>
+  
+  <test name="Mein Bestellungen" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.MyAccount12398_02_g" />
+    </classes>
+  </test>  
+
+  <test name="Checkout with login: Shipping page" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.CheckOut12398_07" />
+    </classes>
+  </test>
+ 
+ <test name="Checkout Step Arrows, function" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.CheckOut12398_07_a" />
+    </classes>
+  </test> 
+    
+   <test name="Shipping Page: Delivery Address/billing address page" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.CheckOut12398_07_b" />
+    </classes>
+  </test> 
+
+   <test name="Shipping Page:Verify Price" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.CheckOut12398_07_c" />
+    </classes>
+  </test> 
+  
+  <test name="verifyOrderCompletion" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.CheckOut12398_07_f" />
+    </classes>
+  </test> 
+
+  <test name="verifyPaymentPage" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.CheckOut12398_07_e" />
+    </classes>
+  </test> 
+  
+  <test name="verifySummary" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.CheckOut12398_07_d" />
+    </classes>
+  </test> 
+
+  <test name="verifyCategoryNames" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.Categories12398_05" />
+    </classes>
+  </test> 
+  
+  <test name="verifySubCategories" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.Categories12398_05_b" />
+    </classes>
+  </test> 
+  
+  <test name="verifyMouseHoverTopCategories" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.Categories12398_05_a" />
+    </classes>
+  </test> 
+  
+  
+   <test name="verifyPriceSorting" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.Categories12398_05_d" />
+    </classes>
+  </test> 
+  
+  <test name="verifyTopSubCategoriesNavigation" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.Categories12398_05_e" />
+    </classes>
+  </test> 
+  
+  <test name="verifySubCategoryTopSellerProducts" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.Categories12398_05_f" />
+    </classes>
+  </test> 
+  
+  <test name="verifyCategoryFilter" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.Categories12398_05_c" />
+    </classes>
+  </test> 
+  
+   <test name="verifyProductDetail" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.Categories12398_05_g" />
+    </classes>
+  </test>  
+  
+ 
+   
+ <test name="Demo2" >
+
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.CallBack_12398_14" />
+       </classes>
+    
+    </test> 
+ <test name="Demo1" >
+  
+
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.Checkout_12298_08" />
+       </classes>
+    
+    </test>
+     <test name="Demo3" >
+  
+
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.CartPage_12398_04" />
+       </classes>
+    
+    </test>
+     <test name="Demo4" >
+  
+
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.Change_Password_12398_12" />
+       </classes>
+    
+    </test>
+     <test name="Demo5" >
+  
+
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.ChangePassword_12398_11" />
+       </classes>
+    
+    </test>
+     <test name="Demo6" >
+  
+
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.FabricSampleFunction" />
+       </classes>
+    
+    </test>
+     <test name="Demo7" >
+  
+
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.FooterModule_12398_10_a" />
+       </classes>
+    
+    </test>
+    
+     <test name="Demo10" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.ModalCartWindow_12398_03" />
+       </classes>
+    
+    </test>
+    
+     <test name="Demo11" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.SearchFunctionality_12398_06_07" />
+       </classes>
+    
+    </test>
+     <test name="Demo12" >
+  
+
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.SignOut_12398_13" />
+       </classes>
+    
+    </test>  -->
+   
+ <!-- Sikuli Test cases -->
+  <!--    
+  <test name="homePageGui" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.HomepageGUI" />
+    </classes>
+  </test> 
+  
+  
+   <test name="wishlistGui" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.WishlistGUI" />
+    </classes>
+  </test> 
+  
+  
+   <test name="productDetailGui" >
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.ProductDetailGUI" />
+    </classes>
+  </test> 
+  
+  
+    <test name="Cart Page GUI" >
+  
+
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.CartPage_GUI" />
+       </classes>
+    
+    </test>
+
+   <test name="Account Page GUI" >
+  
+
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.MyAccount_Page_UI" />
+       </classes>
+    
+    </test>
+
+   <test name="Call Back GUI" >
+  
+
+    <classes>
+       <class name="Utility.Base" />
+       <class name="TestCases.CallBack_UI" />
+       </classes>
+    
+    </test>
+  -->   
+  
 </suite>

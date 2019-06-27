@@ -229,11 +229,11 @@ public class util extends Base {
 
     }
 	
-	public static String getscreenshot(WebDriver driver,String screenshotName)
+	/*public static String getscreenshot(Webdriver getDriver(),String screenshotName)
     {    
 		String filePath=null;
 		try{
-            File scrnFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+            File scrnFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
             filePath  = System.getProperty("user.dir")+"\\Screenshots\\"+screenshotName+".png";
             
             FileUtils.copyFile(scrnFile, new File(filePath));
@@ -245,7 +245,7 @@ public class util extends Base {
 	return filePath;
     }
 	
-	
+	*/
 	
 	public static String CaptureScreenShotWithTestStepNameUsingRobotClass(String testStepsName)
 	{
@@ -276,7 +276,7 @@ public class util extends Base {
 	
 	
 	public static void clickByXpath(String xpath){
-		driver.findElement(By.xpath(xpath)).click();
+		getDriver().findElement(By.xpath(xpath)).click();
 	}
     
 	public static String  replaceChar(String testChar,String initial,String replacedChar){
@@ -287,7 +287,7 @@ public class util extends Base {
 	
 	public static String getAlertText() {
 		String text = null;
-		Alert alert = driver.switchTo().alert();
+		Alert alert = getDriver().switchTo().alert();
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
@@ -301,7 +301,7 @@ public class util extends Base {
 	
 	
 	public static String alertHandles(String operation) {
-		Alert alert = driver.switchTo().alert();
+		Alert alert = getDriver().switchTo().alert();
 		String text = "";
 		switch(operation) {
 		
@@ -322,34 +322,34 @@ public class util extends Base {
 	}
 	
 	public static void mousehover(String st1){
-	    Actions a = new Actions(driver);
-	    WebElement we =   driver.findElement(By.xpath(st1));
+	    Actions a = new Actions(getDriver());
+	    WebElement we =   getDriver().findElement(By.xpath(st1));
 	    a.moveToElement(we).build().perform();
 	}
 
 	public static String getText(String xpath){
 		String text=null;
-		text = driver.findElement(By.xpath(xpath)).getText();
+		text = getDriver().findElement(By.xpath(xpath)).getText();
 		return text;
 	}
 	
 
 	public static String getAttribute(String attribute,String xpath){
 		String attributeVal = null;
-		attributeVal = driver.findElement(By.xpath(xpath)).getAttribute(attribute);
+		attributeVal = getDriver().findElement(By.xpath(xpath)).getAttribute(attribute);
 		return attributeVal;
 	}
 	
 	public static void enterText(String data, String xpath){
-		driver.findElement(By.xpath(xpath)).sendKeys(data);
+		getDriver().findElement(By.xpath(xpath)).sendKeys(data);
 	}
 	
 	public static void clearText(String xpath){
-		driver.findElement(By.xpath(xpath)).clear();
+		getDriver().findElement(By.xpath(xpath)).clear();
 	}
 
 	public static void selectDropDownValue(String text,String xpath){
-		WebElement we = driver.findElement(By.xpath(xpath));
+		WebElement we = getDriver().findElement(By.xpath(xpath));
 		Select selectDrop = new Select(we);
 		selectDrop.selectByVisibleText(text);
 		
@@ -357,23 +357,23 @@ public class util extends Base {
 	
 	public static List<WebElement> getElements(String xpath){
 		List<WebElement> ls = new ArrayList<WebElement>();
-		 ls = driver.findElements(By.xpath(xpath));
+		 ls = getDriver().findElements(By.xpath(xpath));
 		
 		return ls;
 	}
 	
 	public static void scrollTo() {
-		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		JavascriptExecutor jse = (JavascriptExecutor)getDriver();
 		jse.executeScript("window.scrollBy(0,550)", "");
     }
 	
 	public static void switchToIframe(String frameid){
 		
-		driver.switchTo().frame(frameid);
+		getDriver().switchTo().frame(frameid);
 	}
 	public static boolean elementPresentOrNot(String xpath){
  	   boolean status=false;
- 	   status = driver.findElement(By.xpath(xpath)).isDisplayed();
+ 	   status = getDriver().findElement(By.xpath(xpath)).isDisplayed();
  	   return status;
     }
 
@@ -388,9 +388,9 @@ public class util extends Base {
 	}
 
 	/*public void addremovewishlist(String ctr, String wishlistbttn) throws InterruptedException{
-		driver.findElement(By.xpath(wishlistbttn)).click();
+		getDriver().findElement(By.xpath(wishlistbttn)).click();
 		Thread.sleep(5000);
-		String str = driver.findElementById(wishlist_counter_e).getText();
+		String str = getDriver().findElementById(wishlist_counter_e).getText();
 		System.out.println("Counter value is : "+str);
 		if(str.equalsIgnoreCase(ctr))
 		{
@@ -408,9 +408,9 @@ public class util extends Base {
 	   
     public static void mousehoverNitin(String st1){
       try{ 
-    	  Actions a = new Actions(driver);
+    	  Actions a = new Actions(getDriver());
         
-        WebElement we =   driver.findElement(By.xpath(st1));
+        WebElement we =   getDriver().findElement(By.xpath(st1));
         Point coordinates = we.getLocation();
         Robot robot = new Robot();
         robot.mouseMove(coordinates.getX(),coordinates.getY()+120);
@@ -433,7 +433,7 @@ public class util extends Base {
     }
 
    /* public void screenshot(String pagename) throws IOException{
-    	File srcfile =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+    	File srcfile =((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.FILE);
     	FileUtils.copyFile(srcfile, new File("C:\\Users\\nitin\\Desktop\\Testing Report\\Whole Site Test Cases\\Automated Test Cases\\12950\\"+pagename+".png"));
 
     }*/
@@ -448,7 +448,7 @@ public class util extends Base {
     
     public static void selectdropdownvalue(String str1, String str2){
     	
-    	 Select daydropdown = new Select(driver.findElement(By.xpath(str1)));
+    	 Select daydropdown = new Select(getDriver().findElement(By.xpath(str1)));
     	 int i= Integer.parseInt(str2);
     	 daydropdown.selectByIndex(i); 
     }
@@ -457,16 +457,16 @@ public class util extends Base {
 
     public static void clickevent(String str){
     
-    	driver.findElement(By.xpath(str)).click();
+    	getDriver().findElement(By.xpath(str)).click();
     }
     
     public static void clickIDevent(String str){
         
-    	driver.findElement(By.id(str)).click();
+    	getDriver().findElement(By.id(str)).click();
     }
     
     public static void pagescroll(int i){
-    	JavascriptExecutor jse = (JavascriptExecutor)driver;
+    	JavascriptExecutor jse = (JavascriptExecutor)getDriver();
     	jse.executeScript("window.scrollBy(0,"+i+")","");
     	    	
     }
@@ -475,7 +475,7 @@ public class util extends Base {
    
     public static void enterdata(String str, String str1){
     	
-    	driver.findElement(By.xpath(str)).sendKeys(str1);
+    	getDriver().findElement(By.xpath(str)).sendKeys(str1);
     	
     }
     
@@ -483,20 +483,20 @@ public class util extends Base {
     
    public static void enterdataID(String str, String str1){
     	
-    	driver.findElement(By.id(str)).sendKeys(str1);
+    	getDriver().findElement(By.id(str)).sendKeys(str1);
     	
     }
 
 
   public static boolean elementdisplayed(String str){
-	  driver.findElement(By.xpath(str)).isDisplayed();
+	  getDriver().findElement(By.xpath(str)).isDisplayed();
 	  return true;
   }
   
   public static void getelement(String stname, String stelement){
 	  String str;
 	  
-	  List<WebElement> drop = driver.findElements(By.xpath(stelement));
+	  List<WebElement> drop = getDriver().findElements(By.xpath(stelement));
 		
 		 java.util.Iterator<WebElement> i = drop.iterator();
 		
@@ -517,13 +517,13 @@ public class util extends Base {
   
   public static String IDgetText(String id){
 		String text = null;
-		text = driver.findElement(By.id(id)).getText();
+		text = getDriver().findElement(By.id(id)).getText();
 		return text;
 	}
   
   public static String getattribute(String xpath, String att){
 	 
-	 String st = driver.findElement(By.xpath(xpath)).getAttribute(att);
+	 String st = getDriver().findElement(By.xpath(xpath)).getAttribute(att);
 	return st;
   }
   
@@ -830,7 +830,7 @@ public class util extends Base {
 	                Thread.sleep(2000);
 	  
 
-	             Actions a = new Actions(driver);
+	             Actions a = new Actions(getDriver());
 	            a.moveToElement(image).build().perform();
 	            
 	            Thread.sleep(2000);
@@ -966,7 +966,7 @@ public class util extends Base {
 		   
 		   Thread.sleep(2000);
 		   
-		   Actions a = new Actions(driver);
+		   Actions a = new Actions(getDriver());
 		   a.moveToElement(row).build().perform();
 		
 		   

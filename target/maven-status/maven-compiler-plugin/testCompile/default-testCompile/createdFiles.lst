@@ -1,17 +1,4 @@
-PageObjects\ManagerPage.class
-Utility\Base.class
-Utility\util.class
-TestCases\TestReRun.class
 Listener\RetryTests.class
-TestCases\TestingAgainRun.class
 TestCases\testing3.class
-TestCases\testing.class
-Utility\ExtentManager.class
 Listener\ListenReRun.class
-PageObjects\HomePage.class
-TestCases\AddCustomerAndAccount.class
-TestCases\LoginTest.class
-TestCases\ChangePasswordTest.class
 com\test\automation\Practise\AppTest.class
-TestCases\testing2.class
-Utility\ExtentTestManager.class

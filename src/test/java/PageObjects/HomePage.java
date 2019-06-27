@@ -13,22 +13,22 @@ public class HomePage extends Base {
 	
 	
 	public static void enterUserID(String userID) {
-		driver.findElement(By.xpath(userIdXpath)).sendKeys(userID);
+		getDriver().findElement(By.xpath(userIdXpath)).sendKeys(userID);
 	}
 	
 	public static void enterPassword(String password) {
-		driver.findElement(By.xpath(passwordXpath)).sendKeys(password);
+		getDriver().findElement(By.xpath(passwordXpath)).sendKeys(password);
 	}
 	
 	public static void clickLogin() {
-		driver.findElement(By.xpath(loginXpath)).click();
+		getDriver().findElement(By.xpath(loginXpath)).click();
 	}
 	
 	public static void login(String userID,String password) {
 		
-		driver.findElement(By.xpath(userIdXpath)).sendKeys(userID);
-		driver.findElement(By.xpath(passwordXpath)).sendKeys(password);
-		driver.findElement(By.xpath(loginXpath)).click();
+		getDriver().findElement(By.xpath(userIdXpath)).sendKeys(userID);
+		getDriver().findElement(By.xpath(passwordXpath)).sendKeys(password);
+		getDriver().findElement(By.xpath(loginXpath)).click();
 	}
 
 }

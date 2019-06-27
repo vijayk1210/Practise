@@ -1,45 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite1]">
-  <listeners>
-    <listener class-name="Listener.ListenReRun"/>
-  </listeners>
-  <test name="ReRun(failed)">
+<suite thread-count="2" name="Failed suite [Suite1]" parallel="tests">
+  <parameter name="node" value="http://localhost:6081/wd/hub"/>
+  <parameter name="browser" value="firefox"/>
+  <test name="Selenium Grid(failed)" parallel="tests">
+    <parameter name="node" value="http://localhost:6080/wd/hub"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="TestCases.TestReRun">
         <methods>
           <include name="afterEachTestMethod"/>
-          <include name="initializeTestBaseSetup"/>
-          <include name="ReRunOne"/>
-        </methods>
-      </class> <!-- TestCases.TestReRun -->
-      <class name="Utility.Base">
-        <methods>
+          <include name="afterEachTestMethod"/>
+          <include name="testbugFromJenkins"/>
           <include name="extentSetup"/>
+          <include name="initializeTestBaseSetup"/>
+          <include name="initializeTestBaseSetup"/>
           <include name="generateReport"/>
         </methods>
-      </class> <!-- Utility.Base -->
+      </class> <!-- TestCases.TestReRun -->
     </classes>
-  </test> <!-- ReRun(failed) -->
-  <test name="AnotherReRun(failed)">
+  </test> <!-- Selenium Grid(failed) -->
+  <test name="Selenium Grid2(failed)" parallel="tests">
+    <parameter name="node" value="http://localhost:6081/wd/hub"/>
+    <parameter name="browser" value="firefox"/>
     <classes>
       <class name="TestCases.TestReRun">
         <methods>
           <include name="afterEachTestMethod"/>
-          <include name="initializeTestBaseSetup"/>
-        </methods>
-      </class> <!-- TestCases.TestReRun -->
-      <class name="TestCases.TestingAgainRun">
-        <methods>
-          <include name="ReRunningTwo"/>
-        </methods>
-      </class> <!-- TestCases.TestingAgainRun -->
-      <class name="Utility.Base">
-        <methods>
+          <include name="afterEachTestMethod"/>
+          <include name="testbugFromJenkins"/>
           <include name="extentSetup"/>
+          <include name="initializeTestBaseSetup"/>
+          <include name="initializeTestBaseSetup"/>
           <include name="generateReport"/>
         </methods>
-      </class> <!-- Utility.Base -->
+      </class> <!-- TestCases.TestReRun -->
     </classes>
-  </test> <!-- AnotherReRun(failed) -->
+  </test> <!-- Selenium Grid2(failed) -->
 </suite> <!-- Failed suite [Suite1] -->
