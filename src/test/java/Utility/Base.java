@@ -30,7 +30,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-import io.appium.java_client.android.AndroidDriver;
+//import io.appium.java_client.android.AndroidDriver;
 
 public class Base {
 	
