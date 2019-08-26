@@ -50,7 +50,7 @@ public class RestAssuredBDD{
 	        get("http://ergast.com/api/f1/circuits/{circuitId}.json").
 	    then().
 	        assertThat().
-	        body("MRData.CircuitTable.Circuits[0].circuitName",equalTo(circuitName)).
+	        body("MRData.CircuitTable.Circuits[0].circuitName",equalTo(location)).
 	        and(). 
 	        body("MRData.CircuitTable.Circuits.Location[0].country",equalTo(location));
 	  

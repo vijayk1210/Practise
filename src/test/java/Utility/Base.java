@@ -46,8 +46,9 @@ public class Base {
    	  case "chrome":
    		 capability = new DesiredCapabilities();
    	     //capability.setCapability("version","");
-   		 capability.setCapability("platformName","Android");
-   	     capability.setCapability("deviceName","Samsung Galaxy S6");
+   		 capability.setCapability("platform","LINUX");
+   		// capability.setCapability("platformName","Android");
+   	    // capability.setCapability("deviceName","Samsung Galaxy S6");
    	     capability.setBrowserName(browser);
    	  try {
 			driver = new AndroidDriver(new URL(node),capability);
@@ -60,9 +61,9 @@ public class Base {
    	  case "firefox":
    		capability = new DesiredCapabilities();
    		  //capability.setCapability("version","");
-  	      //capability.setCapability("platform","LINUX");
-   	    capability.setCapability("platformName","Android");
-   	    capability.setCapability("deviceName","Nexus 5");
+  	      capability.setCapability("platform","LINUX");
+   	   // capability.setCapability("platformName","Android");
+   	   // capability.setCapability("deviceName","Nexus 5");
    		capability.setBrowserName(browser);
   	    try {
 			driver = new AndroidDriver(new URL(node),capability);
