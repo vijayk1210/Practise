@@ -40,7 +40,8 @@ public class Base {
     
     
     private void grid(String browser,String node,String appURL){
-      AndroidDriver driver = null;
+      //AndroidDriver driver = null;
+      RemoteWebDriver driver = null;
       DesiredCapabilities capability = null;
       switch(browser){
    	  case "chrome":
@@ -51,7 +52,7 @@ public class Base {
    	    // capability.setCapability("deviceName","Samsung Galaxy S6");
    	     capability.setBrowserName(browser);
    	  try {
-			driver = new AndroidDriver(new URL(node),capability);
+			driver = new RemoteWebDriver(new URL(node),capability);
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -66,7 +67,7 @@ public class Base {
    	   // capability.setCapability("deviceName","Nexus 5");
    		capability.setBrowserName(browser);
   	    try {
-			driver = new AndroidDriver(new URL(node),capability);
+  	    	driver = new RemoteWebDriver(new URL(node),capability);
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -86,7 +87,7 @@ public class Base {
         return webDriver.get();
     }
  
-    public void setWebDriver(AndroidDriver driver) {
+    public void setWebDriver(RemoteWebDriver driver) {
     	webDriver.set(driver);
     }
   

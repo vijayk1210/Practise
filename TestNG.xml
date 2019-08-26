@@ -6,7 +6,7 @@
  
   <test name="Selenium Grid" > 
    <parameter name="browser" value="chrome"></parameter>
-   <parameter name="node" value="http://localhost:6080/wd/hub"></parameter>
+   <parameter name="node" value="http://localhost:4444/wd/hub"></parameter>
     <classes>
        <class name="Utility.Base" />
        <class name="TestCases.TestReRun" />
@@ -15,7 +15,7 @@
   
    <test name="Selenium Grid2" > 
   <parameter name="browser" value="firefox"></parameter>
-  <parameter name="node" value="http://localhost:6081/wd/hub"></parameter>
+  <parameter name="node" value="http://localhost:4444/wd/hub"></parameter>
     <classes>
        <class name="Utility.Base" />
        <class name="TestCases.TestReRun" />
