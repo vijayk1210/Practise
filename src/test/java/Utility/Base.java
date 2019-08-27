@@ -154,7 +154,7 @@ public class Base {
         
         if(getDriver()!=null){
         	 
-        	getDriver().close();
+        	getDriver().quit();
         	 
          }
         

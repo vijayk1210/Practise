@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="2" total="4" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="1194" started-at="2019-05-27T11:47:22Z" finished-at="2019-05-27T11:47:23Z">
+  <suite name="Suite1" duration-ms="4780" started-at="2019-08-26T08:15:22Z" finished-at="2019-08-26T08:15:27Z">
     <groups>
     </groups>
-    <test name="Selenium Grid" duration-ms="1163" started-at="2019-05-27T11:47:22Z" finished-at="2019-05-27T11:47:23Z">
+    <test name="Selenium Grid" duration-ms="4747" started-at="2019-08-26T08:15:22Z" finished-at="2019-08-26T08:15:27Z">
       <class name="TestCases.TestReRun">
-        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:TestCases.TestReRun@365a6a43]" name="initializeTestBaseSetup" is-config="true" duration-ms="897" started-at="2019-05-27T17:17:22Z" finished-at="2019-05-27T17:17:23Z">
+        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:TestCases.TestReRun@3ee6dc82]" name="initializeTestBaseSetup" is-config="true" duration-ms="2439" started-at="2019-08-26T13:45:22Z" finished-at="2019-08-26T13:45:24Z">
           <params>
             <param index="0">
               <value>
@@ -16,7 +16,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[http://localhost:6081/wd/hub]]>
+                <![CDATA[http://localhost:4444/wd/hub]]>
               </value>
             </param>
             <param index="2">
@@ -28,22 +28,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTestBaseSetup -->
-        <test-method status="PASS" signature="eightyTwenty()[pri:0, instance:TestCases.TestReRun@365a6a43]" name="eightyTwenty" duration-ms="2" started-at="2019-05-27T17:17:23Z" finished-at="2019-05-27T17:17:23Z">
+        <test-method status="PASS" signature="eightyTwenty()[pri:0, instance:TestCases.TestReRun@3ee6dc82]" name="eightyTwenty" duration-ms="11" started-at="2019-08-26T13:45:24Z" finished-at="2019-08-26T13:45:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- eightyTwenty -->
-        <test-method status="PASS" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:TestCases.TestReRun@365a6a43]" name="afterEachTestMethod" is-config="true" duration-ms="169" started-at="2019-05-27T17:17:23Z" finished-at="2019-05-27T17:17:23Z">
+        <test-method status="PASS" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:TestCases.TestReRun@3ee6dc82]" name="afterEachTestMethod" is-config="true" duration-ms="221" started-at="2019-08-26T13:45:24Z" finished-at="2019-08-26T13:45:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=eightyTwenty status=SUCCESS method=TestReRun.eightyTwenty()[pri:0, instance:TestCases.TestReRun@365a6a43] output={null}]]]>
+                <![CDATA[[TestResult name=eightyTwenty status=SUCCESS method=TestReRun.eightyTwenty()[pri:0, instance:TestCases.TestReRun@3ee6dc82] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:TestCases.TestReRun@365a6a43]" name="initializeTestBaseSetup" is-config="true" duration-ms="47" started-at="2019-05-27T17:17:23Z" finished-at="2019-05-27T17:17:23Z">
+        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:TestCases.TestReRun@3ee6dc82]" name="initializeTestBaseSetup" is-config="true" duration-ms="2010" started-at="2019-08-26T13:45:24Z" finished-at="2019-08-26T13:45:26Z">
           <params>
             <param index="0">
               <value>
@@ -52,7 +52,7 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[http://localhost:6081/wd/hub]]>
+                <![CDATA[http://localhost:4444/wd/hub]]>
               </value>
             </param>
             <param index="2">
@@ -64,7 +64,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTestBaseSetup -->
-        <test-method status="FAIL" signature="testbugFromJenkins()[pri:0, instance:TestCases.TestReRun@365a6a43]" name="testbugFromJenkins" duration-ms="3" started-at="2019-05-27T17:17:23Z" finished-at="2019-05-27T17:17:23Z">
+        <test-method status="FAIL" signature="testbugFromJenkins()[pri:0, instance:TestCases.TestReRun@3ee6dc82]" name="testbugFromJenkins" duration-ms="4" started-at="2019-08-26T13:45:26Z" finished-at="2019-08-26T13:45:26Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
@@ -101,11 +101,11 @@ Another soft assert failure
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testbugFromJenkins -->
-        <test-method status="PASS" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:TestCases.TestReRun@365a6a43]" name="afterEachTestMethod" is-config="true" duration-ms="30" started-at="2019-05-27T17:17:23Z" finished-at="2019-05-27T17:17:23Z">
+        <test-method status="PASS" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:TestCases.TestReRun@3ee6dc82]" name="afterEachTestMethod" is-config="true" duration-ms="43" started-at="2019-08-26T13:45:26Z" finished-at="2019-08-26T13:45:27Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testbugFromJenkins status=FAILURE method=TestReRun.testbugFromJenkins()[pri:0, instance:TestCases.TestReRun@365a6a43] output={null}]]]>
+                <![CDATA[[TestResult name=testbugFromJenkins status=FAILURE method=TestReRun.testbugFromJenkins()[pri:0, instance:TestCases.TestReRun@3ee6dc82] output={null}]]]>
               </value>
             </param>
           </params>
@@ -114,20 +114,20 @@ Another soft assert failure
         </test-method> <!-- afterEachTestMethod -->
       </class> <!-- TestCases.TestReRun -->
     </test> <!-- Selenium Grid -->
-    <test name="Selenium Grid2" duration-ms="1194" started-at="2019-05-27T11:47:22Z" finished-at="2019-05-27T11:47:23Z">
+    <test name="Selenium Grid2" duration-ms="4780" started-at="2019-08-26T08:15:22Z" finished-at="2019-08-26T08:15:27Z">
       <class name="TestCases.TestReRun">
-        <test-method status="PASS" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:TestCases.TestReRun@3b90a30a]" name="extentSetup" is-config="true" duration-ms="269" started-at="2019-05-27T17:17:21Z" finished-at="2019-05-27T17:17:22Z">
+        <test-method status="PASS" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:TestCases.TestReRun@322b09da]" name="extentSetup" is-config="true" duration-ms="195" started-at="2019-08-26T13:45:22Z" finished-at="2019-08-26T13:45:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@14229fa7]]>
+                <![CDATA[org.testng.TestRunner@2109a691]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentSetup -->
-        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:TestCases.TestReRun@3b90a30a]" name="initializeTestBaseSetup" is-config="true" duration-ms="897" started-at="2019-05-27T17:17:22Z" finished-at="2019-05-27T17:17:23Z">
+        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:TestCases.TestReRun@322b09da]" name="initializeTestBaseSetup" is-config="true" duration-ms="2439" started-at="2019-08-26T13:45:22Z" finished-at="2019-08-26T13:45:24Z">
           <params>
             <param index="0">
               <value>
@@ -136,7 +136,7 @@ Another soft assert failure
             </param>
             <param index="1">
               <value>
-                <![CDATA[http://localhost:6080/wd/hub]]>
+                <![CDATA[http://localhost:4444/wd/hub]]>
               </value>
             </param>
             <param index="2">
@@ -148,22 +148,22 @@ Another soft assert failure
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTestBaseSetup -->
-        <test-method status="PASS" signature="eightyTwenty()[pri:0, instance:TestCases.TestReRun@3b90a30a]" name="eightyTwenty" duration-ms="2" started-at="2019-05-27T17:17:23Z" finished-at="2019-05-27T17:17:23Z">
+        <test-method status="PASS" signature="eightyTwenty()[pri:0, instance:TestCases.TestReRun@322b09da]" name="eightyTwenty" duration-ms="11" started-at="2019-08-26T13:45:24Z" finished-at="2019-08-26T13:45:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- eightyTwenty -->
-        <test-method status="PASS" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:TestCases.TestReRun@3b90a30a]" name="afterEachTestMethod" is-config="true" duration-ms="203" started-at="2019-05-27T17:17:23Z" finished-at="2019-05-27T17:17:23Z">
+        <test-method status="PASS" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:TestCases.TestReRun@322b09da]" name="afterEachTestMethod" is-config="true" duration-ms="187" started-at="2019-08-26T13:45:24Z" finished-at="2019-08-26T13:45:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=eightyTwenty status=SUCCESS method=TestReRun.eightyTwenty()[pri:0, instance:TestCases.TestReRun@3b90a30a] output={null}]]]>
+                <![CDATA[[TestResult name=eightyTwenty status=SUCCESS method=TestReRun.eightyTwenty()[pri:0, instance:TestCases.TestReRun@322b09da] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:TestCases.TestReRun@3b90a30a]" name="initializeTestBaseSetup" is-config="true" duration-ms="14" started-at="2019-05-27T17:17:23Z" finished-at="2019-05-27T17:17:23Z">
+        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:TestCases.TestReRun@322b09da]" name="initializeTestBaseSetup" is-config="true" duration-ms="2068" started-at="2019-08-26T13:45:24Z" finished-at="2019-08-26T13:45:26Z">
           <params>
             <param index="0">
               <value>
@@ -172,7 +172,7 @@ Another soft assert failure
             </param>
             <param index="1">
               <value>
-                <![CDATA[http://localhost:6080/wd/hub]]>
+                <![CDATA[http://localhost:4444/wd/hub]]>
               </value>
             </param>
             <param index="2">
@@ -184,7 +184,7 @@ Another soft assert failure
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTestBaseSetup -->
-        <test-method status="FAIL" signature="testbugFromJenkins()[pri:0, instance:TestCases.TestReRun@3b90a30a]" name="testbugFromJenkins" duration-ms="3" started-at="2019-05-27T17:17:23Z" finished-at="2019-05-27T17:17:23Z">
+        <test-method status="FAIL" signature="testbugFromJenkins()[pri:0, instance:TestCases.TestReRun@322b09da]" name="testbugFromJenkins" duration-ms="0" started-at="2019-08-26T13:45:26Z" finished-at="2019-08-26T13:45:26Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
@@ -221,18 +221,18 @@ Another soft assert failure
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testbugFromJenkins -->
-        <test-method status="PASS" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:TestCases.TestReRun@3b90a30a]" name="afterEachTestMethod" is-config="true" duration-ms="60" started-at="2019-05-27T17:17:23Z" finished-at="2019-05-27T17:17:23Z">
+        <test-method status="PASS" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:TestCases.TestReRun@322b09da]" name="afterEachTestMethod" is-config="true" duration-ms="59" started-at="2019-08-26T13:45:27Z" finished-at="2019-08-26T13:45:27Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testbugFromJenkins status=FAILURE method=TestReRun.testbugFromJenkins()[pri:0, instance:TestCases.TestReRun@3b90a30a] output={null}]]]>
+                <![CDATA[[TestResult name=testbugFromJenkins status=FAILURE method=TestReRun.testbugFromJenkins()[pri:0, instance:TestCases.TestReRun@322b09da] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method status="PASS" signature="generateReport()[pri:0, instance:TestCases.TestReRun@3b90a30a]" name="generateReport" is-config="true" duration-ms="29" started-at="2019-05-27T17:17:23Z" finished-at="2019-05-27T17:17:23Z">
+        <test-method status="PASS" signature="generateReport()[pri:0, instance:TestCases.TestReRun@322b09da]" name="generateReport" is-config="true" duration-ms="31" started-at="2019-08-26T13:45:27Z" finished-at="2019-08-26T13:45:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->

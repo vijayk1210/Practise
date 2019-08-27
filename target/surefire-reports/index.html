@@ -261,7 +261,7 @@ Another soft assert failure
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;2&quot; verbose=&quot;0&quot; name=&quot;Suite1&quot; parallel=&quot;tests&quot;&gt;
   &lt;test name=&quot;Selenium Grid&quot;&gt;
-    &lt;parameter name=&quot;node&quot; value=&quot;http://localhost:6081/wd/hub&quot;/&gt;
+    &lt;parameter name=&quot;node&quot; value=&quot;http://localhost:4444/wd/hub&quot;/&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;Utility.Base&quot;/&gt;
@@ -269,7 +269,7 @@ Another soft assert failure
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Selenium Grid --&gt;
   &lt;test name=&quot;Selenium Grid2&quot;&gt;
-    &lt;parameter name=&quot;node&quot; value=&quot;http://localhost:6080/wd/hub&quot;/&gt;
+    &lt;parameter name=&quot;node&quot; value=&quot;http://localhost:4444/wd/hub&quot;/&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;Utility.Base&quot;/&gt;
@@ -318,26 +318,26 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testbugFromJenkins')
+data.setCell(0, 1, 'eightyTwenty')
 data.setCell(0, 2, 'TestCases.TestReRun')
-data.setCell(0, 3, 3);
+data.setCell(0, 3, 11);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testbugFromJenkins')
+data.setCell(1, 1, 'eightyTwenty')
 data.setCell(1, 2, 'TestCases.TestReRun')
-data.setCell(1, 3, 3);
+data.setCell(1, 3, 11);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'eightyTwenty')
+data.setCell(2, 1, 'testbugFromJenkins')
 data.setCell(2, 2, 'TestCases.TestReRun')
-data.setCell(2, 3, 2);
+data.setCell(2, 3, 4);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'eightyTwenty')
+data.setCell(3, 1, 'testbugFromJenkins')
 data.setCell(3, 2, 'TestCases.TestReRun')
-data.setCell(3, 3, 2);
+data.setCell(3, 3, 0);
 window.suiteTableData['Suite1']= { tableData: data, tableDiv: 'times-div-Suite1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 ms</span>
+              <span class="suite-total-time">Total running time: 26 ms</span>
               <div id="times-div-Suite1">
               </div> <!-- times-div-Suite1 -->
             </div> <!-- times-div -->
@@ -378,64 +378,64 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">TestCases.TestReRun</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">extentSetup(org.testng.TestRunner@14229fa7)</span>
+                <span class="method-name">extentSetup(org.testng.TestRunner@2109a691)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">initializeTestBaseSetup(firefox, http://localhost:6080/wd/hub, public void TestCases.TestReRun.eightyTwenty())</span>
-                <span class="method-start">282 ms</span>
+                <span class="method-name">initializeTestBaseSetup(firefox, http://localhost:4444/wd/hub, public void TestCases.TestReRun.eightyTwenty())</span>
+                <span class="method-start">206 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">initializeTestBaseSetup(chrome, http://localhost:6081/wd/hub, public void TestCases.TestReRun.eightyTwenty())</span>
-                <span class="method-start">282 ms</span>
+                <span class="method-name">initializeTestBaseSetup(chrome, http://localhost:4444/wd/hub, public void TestCases.TestReRun.eightyTwenty())</span>
+                <span class="method-start">206 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">eightyTwenty</span>
-                <span class="method-start">1179 ms</span>
+                <span class="method-start">2646 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">eightyTwenty</span>
-                <span class="method-start">1179 ms</span>
+                <span class="method-start">2646 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEachTestMethod([TestResult name=eightyTwenty status=SUCCESS method=TestReRun.eightyTwenty()[pri:0, instance:TestCas...)</span>
-                <span class="method-start">1183 ms</span>
+                <span class="method-start">2662 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">afterEachTestMethod([TestResult name=eightyTwenty status=SUCCESS method=TestReRun.eightyTwenty()[pri:0, instance:TestCas...)</span>
-                <span class="method-start">1183 ms</span>
+                <span class="method-start">2662 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">initializeTestBaseSetup(chrome, http://localhost:6081/wd/hub, public void TestCases.TestReRun.testbugFromJenkins())</span>
-                <span class="method-start">1353 ms</span>
+                <span class="method-name">initializeTestBaseSetup(firefox, http://localhost:4444/wd/hub, public void TestCases.TestReRun.testbugFromJenkins())</span>
+                <span class="method-start">2850 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">initializeTestBaseSetup(firefox, http://localhost:6080/wd/hub, public void TestCases.TestReRun.testbugFromJenkins())</span>
-                <span class="method-start">1386 ms</span>
+                <span class="method-name">initializeTestBaseSetup(chrome, http://localhost:4444/wd/hub, public void TestCases.TestReRun.testbugFromJenkins())</span>
+                <span class="method-start">2884 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testbugFromJenkins</span>
-                <span class="method-start">1400 ms</span>
+                <span class="method-start">4894 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterEachTestMethod([TestResult name=testbugFromJenkins status=FAILURE method=TestReRun.testbugFromJenkins()[pri:0, inst...)</span>
+                <span class="method-start">4901 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testbugFromJenkins</span>
-                <span class="method-start">1400 ms</span>
+                <span class="method-start">4918 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterEachTestMethod([TestResult name=testbugFromJenkins status=FAILURE method=TestReRun.testbugFromJenkins()[pri:0, inst...)</span>
-                <span class="method-start">1405 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">afterEachTestMethod([TestResult name=testbugFromJenkins status=FAILURE method=TestReRun.testbugFromJenkins()[pri:0, inst...)</span>
-                <span class="method-start">1405 ms</span>
+                <span class="method-start">4919 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">generateReport</span>
-                <span class="method-start">1481 ms</span>
+                <span class="method-start">4996 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
