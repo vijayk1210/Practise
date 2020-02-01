@@ -1,0 +1,28 @@
+version: '3.0'
+services:
+    selenium-hub:
+        image: selgridhub
+        container_name: selenium-hub
+        ports:
+         - "4444:4444"
+     
+    firefox-debugnode:
+        image: selenium/node-firefox-debug
+        environment:
+             - HUB_HOST=selenium-hub
+             - HUB_PORT=4444
+        depends_on:
+            - selenium-hub
+        ports:
+         - "9001:5900"
+      
+    chrome-debugnode:
+        image: selenium/node-chrome-debug
+        environment:
+             - HUB_HOST=selenium-hub
+             - HUB_PORT=4444
+        depends_on:
+             - selenium-hub
+        ports:
+         - "9004:5900"
+    
